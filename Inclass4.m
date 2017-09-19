@@ -1,3 +1,5 @@
+%AW: Looks good in general. See minor comments below. 0.94/1. 
+
 %Inclass assignment 4. Due at the start of class on 9/12/17
 
 %1. (a) Write code that makes a file with the words "Random numbers 1" on its
@@ -25,6 +27,8 @@ fclose(fid);
 %(b) Write code that reads only the first line of random numbers in the file and stores
 %them as numbers in an array. 
 
+%AW: this is basically correct but your array at the end is still a cell array of strings, not an array of numbers.
+%Need to use the str2num function. -0.01. 
 fid=fopen('class4.txt', 'r');
 line1=fgetl(fid);
 line2=fgetl(fid);
@@ -43,6 +47,10 @@ ceil(x);
 %Building the function I called: Evaluate
 %if you type Evaluate(x) it should give a True. Because the sum of the
 %array it's greater than 10
+
+
+%AW: the idea is correct but you don't return any variable. Need to return the logical variable, not just print
+% true or false. -0.05. 
 
 function [ ] = Evaluate( x )
 F42=sum(sum(x));
